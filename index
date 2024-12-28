@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</head>
+<body>
+  <div class="mermaid">
+    flowchart TD
+      A["<a href='https://www.notion.so/Features-16a6b4ed0c108071aa52d4d71be2e971?pvs=4'>Neural Tube Defects</a>"]
+      A --> B["<a href='#'>Cranial</a>"]
+      B --> B1["<a href='#'>Anencephaly</a><br><a href='#'>Lethal anomaly</a>"]
+      B --> B2["<a href='#'>Encephalocele</a><br><a href='#'>Intracranial structures protrude through a skull defect</a><br><a href='#'>Usually associated with other NTDs</a>"]
+      B --> B3["<a href='#'>Iniencephaly</a><br><a href='#'>Anomaly of the cranio-cervical spine</a>"]
+      A --> C["<a href='#'>Spinal</a>"]
+      C --> C1["<a href='#'>Open</a>"]
+      C1 --> C1a["<a href='#'>Myelomeningocele</a><br><a href='#'>Protrusion of the neural placode behind the skin surface</a><br><a href='#'>Expansion of subarachnoid space</a>"]
+      C1 --> C1b["<a href='#'>Myeloschisis</a><br><a href='#'>Placode remains at the skin level</a><br><a href='#'>Spinal canal directly exposed</a>"]
+      C --> C2["<a href='#'>Closed</a><br><a href='#'>Not usually associated with cranial alterations</a><br><a href='#'>Alpha-fetoprotein not elevated</a>"]
+      C2 --> C2a["<a href='#'>Subcutaneous Mass?</a>"]
+      C2a --> D1["<a href='#'>Yes</a>"]
+      D1 --> D1a["<a href='#'>Lipomyelomeningocele and Lipomyeloschisis</a><br><a href='#'>Lipomatous mass</a>"]
+      D1 --> D1b["<a href='#'>Meningocele</a><br><a href='#'>Herniation of meninges and skin</a>"]
+      D1 --> D1c["<a href='#'>Myelocystocele</a><br><a href='#'>Herniation of cord with dilated ependymal canal</a>"]
+      C2a --> D2["<a href='#'>No</a>"]
+      D2 --> D2a["<a href='#'>Simple</a><br><a href='#'>Intradural / filum terminale lipoma, terminal ventricle, dermal sinus</a>"]
+      D2 --> D2b["<a href='#'>Complex</a><br><a href='#'>Neurenteric cyst, diastematomyelia, caudal regression syndrome, segmental spinal dysgenesis</a>"]
+  </div>
+</body>
+</html>
