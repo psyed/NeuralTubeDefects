@@ -3,30 +3,72 @@
 <head>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        fontFamily: 'Arial'
+      }
+    });
   </script>
+  <style>
+    body {
+      background-color: #000000;
+    }
+    a {
+      text-decoration: none;
+      color: #D3D3D3; /* Greyish-white color */
+    }
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #D3D3D3; /* Greyish-white color */
+    }
+    .description {
+      font-size: 14px;
+      color: #D3D3D3; /* Greyish-white color */
+    }
+  </style>
 </head>
 <body>
   <div class="mermaid">
     flowchart TD
-      A["<a href='https://www.notion.so/Features-16a6b4ed0c108071aa52d4d71be2e971?pvs=4'>Neural Tube Defects</a>"]
-      A --> B["<a href='#'>Cranial</a>"]
-      B --> B1["<a href='#'>Anencephaly</a><br><a href='#'>Lethal anomaly</a>"]
-      B --> B2["<a href='#'>Encephalocele</a><br><a href='#'>Intracranial structures protrude through a skull defect</a><br><a href='#'>Usually associated with other NTDs</a>"]
-      B --> B3["<a href='#'>Iniencephaly</a><br><a href='#'>Anomaly of the cranio-cervical spine</a>"]
-      A --> C["<a href='#'>Spinal</a>"]
-      C --> C1["<a href='#'>Open</a>"]
-      C1 --> C1a["<a href='#'>Myelomeningocele</a><br><a href='#'>Protrusion of the neural placode behind the skin surface</a><br><a href='#'>Expansion of subarachnoid space</a>"]
-      C1 --> C1b["<a href='#'>Myeloschisis</a><br><a href='#'>Placode remains at the skin level</a><br><a href='#'>Spinal canal directly exposed</a>"]
-      C --> C2["<a href='#'>Closed</a><br><a href='#'>Not usually associated with cranial alterations</a><br><a href='#'>Alpha-fetoprotein not elevated</a>"]
-      C2 --> C2a["<a href='#'>Subcutaneous Mass?</a>"]
-      C2a --> D1["<a href='#'>Yes</a>"]
-      D1 --> D1a["<a href='#'>Lipomyelomeningocele and Lipomyeloschisis</a><br><a href='#'>Lipomatous mass</a>"]
-      D1 --> D1b["<a href='#'>Meningocele</a><br><a href='#'>Herniation of meninges and skin</a>"]
-      D1 --> D1c["<a href='#'>Myelocystocele</a><br><a href='#'>Herniation of cord with dilated ependymal canal</a>"]
-      C2a --> D2["<a href='#'>No</a>"]
-      D2 --> D2a["<a href='#'>Simple</a><br><a href='#'>Intradural / filum terminale lipoma, terminal ventricle, dermal sinus</a>"]
-      D2 --> D2b["<a href='#'>Complex</a><br><a href='#'>Neurenteric cyst, diastematomyelia, caudal regression syndrome, segmental spinal dysgenesis</a>"]
+      A["<span class='title'><a href='#'>Neural Tube Defects</a></span>"]
+      style A fill:#331D2C,stroke:#331D2C
+      A --> B["<span class='title'><a href='#'>Cranial</a></span>"]
+      style B fill:#3F2E3E,stroke:#3F2E3E
+      B --> B1["<span class='title'><a href='#'>Anencephaly</a></span><br><span class='description'><a href='#'>Lethal anomaly</a></span>"]
+      style B1 fill:#3F2E3E,stroke:#3F2E3E
+      B --> B2["<span class='title'><a href='#'>Encephalocele</a></span><br><span class='description'><a href='#'>Intracranial structures protrude through a skull defect</a></span><br><span class='description'><a href='#'>Usually associated with other NTDs</a></span>"]
+      style B2 fill:#3F2E3E,stroke:#3F2E3E
+      B --> B3["<span class='title'><a href='#'>Iniencephaly</a></span><br><span class='description'><a href='#'>Anomaly of the cranio-cervical spine</a></span>"]
+      style B3 fill:#3F2E3E,stroke:#3F2E3E
+      A --> C["<span class='title'><a href='#'>Spinal</a></span>"]
+      style C fill:#A78295,stroke:#A78295
+      C --> C1["<span class='title'><a href='#'>Open</a></span>"]
+      style C1 fill:#A78295,stroke:#A78295
+      C1 --> C1a["<span class='title'><a href='#'>Myelomeningocele</a></span><br><span class='description'><a href='#'>Protrusion of the neural placode behind the skin surface</a></span><br><span class='description'><a href='#'>Expansion of subarachnoid space</a></span>"]
+      style C1a fill:#A78295,stroke:#A78295
+      C1 --> C1b["<span class='title'><a href='#'>Myeloschisis</a></span><br><span class='description'><a href='#'>Placode remains at the skin level</a></span><br><span class='description'><a href='#'>Spinal canal directly exposed</a></span>"]
+      style C1b fill:#A78295,stroke:#A78295
+      C --> C2["<span class='title'><a href='#'>Closed</a></span><br><span class='description'><a href='#'>Not usually associated with cranial alterations</a></span><br><span class='description'><a href='#'>Alpha-fetoprotein not elevated</a></span>"]
+      style C2 fill:#A78295,stroke:#A78295
+      C2 --> C2a["<span class='title'><a href='#'>Subcutaneous Mass?</a></span>"]
+      style C2a fill:#A78295,stroke:#A78295
+      C2a --> D1["<span class='title'><a href='#'>Yes</a></span>"]
+      style D1 fill:#A78295,stroke:#A78295
+      D1 --> D1a["<span class='title'><a href='#'>Lipomyelomeningocele and Lipomyeloschisis</a></span><br><span class='description'><a href='#'>Lipomatous mass</a></span>"]
+      style D1a fill:#A78295,stroke:#A78295
+      D1 --> D1b["<span class='title'><a href='#'>Meningocele</a></span><br><span class='description'><a href='#'>Herniation of meninges and skin</a></span>"]
+      style D1b fill:#A78295,stroke:#A78295
+      D1 --> D1c["<span class='title'><a href='#'>Myelocystocele</a></span><br><span class='description'><a href='#'>Herniation of cord with dilated ependymal canal</a></span>"]
+      style D1c fill:#A78295,stroke:#A78295
+      C2a --> D2["<span class='title'><a href='#'>No</a></span>"]
+      style D2 fill:#A78295,stroke:#A78295
+      D2 --> D2a["<span class='title'><a href='#'>Simple</a></span><br><span class='description'><a href='#'>Intradural / filum terminale lipoma, terminal ventricle, dermal sinus</a></span>"]
+      style D2a fill:#A78295,stroke:#A78295
+      D2 --> D2b["<span class='title'><a href='#'>Complex</a></span><br><span class='description'><a href='#'>Neurenteric cyst, diastematomyelia, caudal regression syndrome, segmental spinal dysgenesis</a></span>"]
+      style D2b fill:#A78295,stroke:#A78295
   </div>
 </body>
 </html>
